@@ -1,4 +1,194 @@
-h1 {
+.SiteHeader {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  padding-top: 20px;
+  z-index: 9999;
+  width: 100%;
+  transition-duration: 1.0s;
+}
+.SiteHeader-inner {
+  margin: 0 auto;
+  width: 1000px;
+  position: relative;
+}
+.SiteHeader h1 {
   font-size: 20px;
-  color: #666;
+  padding-left: 8px;
+  overflow: hidden;
+  letter-spacing: 0.3em;
+}
+
+.SiteHeader a {
+  color: #fff;
+}
+
+.tometaro-logo {
+  float: left;
+}
+
+.SiteNavi ul {
+  list-style: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 15px;
+}
+
+.SiteNavi ul li {
+  float: left;
+  position: relative;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.SiteNavi ul li a {
+  padding: 0 30px;
+}
+
+/* Btn Hover */
+.SiteNavi ul li:hover {
+  text-shadow: 0 0 3px #FFF, 0 0 5px #FFF;
+}
+
+/* Fixed */
+#SiteHeader.fixed {
+  margin-top: 0;
+  top: 0;
+  padding-top: 10px;
+  height: 100px;
+  transition-duration: 1.0s;
+}
+
+/* Toggle Button */
+.SiteNavi-toggle {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 20px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.SiteNavi-toggle div {
+  position: relative;
+}
+
+.SiteNavi-toggle span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #FFF;
+  left: 0;
+  -webkit-transition: .35s ease-in-out;
+  -moz-transition: .35s ease-in-out;
+  transition: .35s ease-in-out;
+}
+
+.SiteNavi-toggle span:nth-child(1) {
+  top: 4px;
+}
+
+.SiteNavi-toggle span:nth-child(2) {
+  top: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+  .SiteHeader, .SiteHeader-inner {
+    width: 100%;
+    padding: 0;
+  }
+
+  .SiteHeader {
+    top: 0;
+    position: fixed;
+    margin-top: 0;
+  }
+  .SiteHeader-mobile {
+    padding-left: 10px;
+    width: 100%;
+    height: 56px;
+    z-index: 999;
+    position: relative;
+  }
+
+  /* Fixed reset */
+  .SiteHeader.fixed {
+    padding-top: 0;
+    background: transparent;
+  }
+
+  .SiteNavi {
+    position: absolute;
+    top: -800px;
+    opacity: 0;
+    transition-duration: 5.0s;
+    width: 100%;
+    text-align: center;
+    padding: 100px 0;
+  }
+
+  .logo {
+    padding: 20px 0 0;
+    width: 180px;
+  }
+
+  .SiteNavi ul {
+    opacity: 0;
+    list-style: none;
+    position: static;
+    right: 0;
+    bottom: 0;
+    height: 600px;
+    transition-duration: 2.0s;
+  }
+
+  .SiteNavi ul li {
+    float: none;
+    position: static;
+    margin: 0 20px;
+    text-align: left;
+    border-bottom: 1px solid #FFF;
+  }
+
+  .SiteNavi ul li:after {
+    display: none;
+  }
+
+  .SiteNavi-toggle {
+    display: block;
+  }
+
+  .open .SiteNavi-toggle span:nth-child(1) {
+    top: 8px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .open .SiteNavi-toggle span:nth-child(2) {
+    top: 8px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .open .SiteNavi {
+    -webkit-overflow-scrolling: touch;
+    top: 0;
+    opacity: 1;
+    transition-duration: 0.1s;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .open .SiteNavi ul {
+    opacity: 1;
+    transition-duration: 4.0s;
+  }
 }

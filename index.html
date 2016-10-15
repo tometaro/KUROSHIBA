@@ -5,14 +5,96 @@
     <title>KUROSHIBA</title>
     <meta name="description" content="">
     <meta name="keywords" content=""/>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="viewport" content="wclassth=device-wclassth,initial-scale=1.0">
     <link rel="stylesheet" href="cssmin/style.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 100) {
+                    $('.SiteHeader').addClass('SiteHeader-bg');
+                } else {
+                    $('.SiteHeader').removeClass('SiteHeader-bg');
+                }
+            });
+
+            $('.SiteNavi-toggle').on("click", function() {
+                $('.SiteHeader').toggleClass('SiteNavi-open');
+                return false;
+            });
+
+            $(".SiteNavi-shadow").click(function() {
+                $('.SiteHeader').removeClass('SiteNavi-open');
+                return false;
+            });
+
+        });
+
+    </script>
 </head>
 <body>
-	<header class="">
-		<h1>KUROSHIBA</h1>
-	</header>
-	<section class="Hero">
-	</section>	
+    <header class="SiteHeader">
+        <div class="SiteHeader-inner">
+            <div class="SiteHeader-logo">
+              <a href="index.html">
+                <p class="SiteHeader-logokuroshiba"><img src="img/logo-kuroshiba.svg" alt="黒柴" height="30" width=""></p>
+                <h1>KUROSHIBA</h1>
+              </a>
+            </div>
+            <div class="SiteNavi-toggle">
+              <div>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <nav class="SiteNavi">
+                <div class="SiteNavi-inner">
+                    <ul>
+                        <li><a href="" class="">HOME</a></li>
+                        <li><a href="" class="">ABOUT</a></li>
+                        <li><a href="" class="">PORTFOLIO</a></li>
+                        <li><a href="" class="">BLOG</a></li>
+                        <li><a href="" class="">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="SiteNavi-shadow"></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="Hero">
+        <div class="Hero-wrapper">
+            <div class="Hero-visual">
+                <img src="img/logo-kuroshiba.svg">
+            </div>
+            <div class="Hero-title">
+                <h1>黒柴</h1>
+                <p>KUROSHIBA</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="Section Section-gray">
+        <div class="Section-wrapper">
+            <h2 class="Section-title">黒柴とは</h2>
+            <p class="Section-text">温暖湿潤気候に強い。一般に主人に対しては非常に忠実、よそ者に対しては馴れ馴れしくせず、賢く勇敢で警戒心も強いため、番犬にも適する。本来は山地や山あいで小動物の狩猟を手伝ってきた犬だが、現在は主に家庭犬として愛されている。しかし、今も狩りやモンキードックなどをして活躍している柴犬もいる。
+            </p>
+        </div>
+    </section>
+
+    <section class="Section Section-white">
+        <div class="Section-wrapper">
+            <h2 class="Section-title">黒柴とは</h2>
+            <p class="Section-text">温暖湿潤気候に強い。一般に主人に対しては非常に忠実、よそ者に対しては馴れ馴れしくせず、賢く勇敢で警戒心も強いため、番犬にも適する。本来は山地や山あいで小動物の狩猟を手伝ってきた犬だが、現在は主に家庭犬として愛されている。しかし、今も狩りやモンキードックなどをして活躍している柴犬もいる。
+            </p>
+        </div>
+    </section>
+
+    <footer class="SiteFooter">
+        <p class="SiteHeader-logokuroshiba"><img src="img/logo-kuroshiba.svg" alt="黒柴" height="30" width=""></p>
+        <p>KUROSHIBA</p>
+    </footer>
+
 </body>
 </html>

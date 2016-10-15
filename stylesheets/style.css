@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,11 +55,285 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-h1 {
-  font-size: 20px;
-  color: #666;
+.SiteHeader {
+  position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  z-index: 9999;
+  width: 100%;
+  transition: 1s ease-in-out;
+}
+.SiteHeader-inner {
+  margin: 0 auto;
+  width: 1000px;
+  position: relative;
+}
+.SiteHeader-logo {
+  padding-left: 10px;
+}
+.SiteHeader-logokuroshiba {
+  display: inline-block;
+}
+.SiteHeader-bg {
+  background: rgba(170, 170, 170, 0.9);
+  transition: 1s ease-in-out;
+}
+.SiteHeader h1 {
+  font-size: 18px;
+  padding-left: 8px;
+  overflow: hidden;
+  line-height: 30px;
+  letter-spacing: 0.2em;
+  display: inline-block;
 }
 
-body {
+.SiteHeader a {
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .SiteHeader, .SiteHeader-inner {
+    width: 100%;
+  }
+
+  .SiteHeader {
+    margin-top: 0;
+  }
+  .SiteHeader-inner {
+    width: 100%;
+  }
+  .SiteHeader-logo {
+    padding-left: 16px;
+  }
+}
+.SiteNavi ul {
+  list-style: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 15px;
+  letter-spacing: .3em;
+  line-height: 30px;
+}
+.SiteNavi ul li {
+  float: left;
+  position: relative;
+}
+.SiteNavi ul li a {
+  padding: 0 30px;
+}
+.SiteNavi ul li:hover {
+  text-shadow: 0 0 3px #FFF, 0 0 5px #FFF;
+}
+.SiteNavi-toggle {
+  display: none;
+  position: absolute;
+  top: 6px;
+  right: 16px;
+  width: 18px;
+  height: 14px;
+  cursor: pointer;
+  z-index: 101;
+}
+.SiteNavi-toggle span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #FFF;
+  left: 0;
+  -webkit-transition: .35s ease-in-out;
+  -moz-transition: .35s ease-in-out;
+  transition: .35s ease-in-out;
+}
+.SiteNavi-toggle span:nth-child(1) {
+  top: 0;
+}
+.SiteNavi-toggle span:nth-child(2) {
+  top: 6px;
+}
+.SiteNavi-toggle span:nth-child(3) {
+  bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .SiteNavi {
+    position: fixed;
+    transform: translateX(-800px);
+    transition-duration: 5.0s;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  .SiteNavi ul {
+    list-style: none;
+    position: static;
+    right: 0;
+    bottom: 0;
+    transition-duration: 2.0s;
+    opacity: 0;
+  }
+  .SiteNavi ul li {
+    float: none;
+    position: static;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px 16px;
+  }
+  .SiteNavi ul li a {
+    padding: 0;
+  }
+  .SiteNavi ul li:after {
+    display: none;
+  }
+  .SiteNavi-toggle {
+    display: block;
+  }
+  .SiteNavi-open .SiteNavi {
+    -webkit-overflow-scrolling: touch;
+    transform: translateX(0);
+    opacity: 1;
+    transition-duration: 0.5s;
+    z-index: 10;
+  }
+  .SiteNavi-open span:nth-child(1) {
+    top: 6px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .SiteNavi-open span:nth-child(2) {
+    opacity: 0;
+  }
+  .SiteNavi-open span:nth-child(3) {
+    bottom: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .SiteNavi-open ul {
+    opacity: 1;
+    transition-duration: 4.0s;
+  }
+  .SiteNavi-inner {
+    float: left;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+  }
+  .SiteNavi-shadow {
+    float: right;
+    width: 30%;
+    background: transparent;
+    height: 100%;
+  }
+}
+.Hero {
+  background: #ccc;
+  width: 100%;
+  color: #FFF;
+  padding-top: 71px;
+}
+.Hero-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  height: 610px;
+  display: table;
+}
+.Hero-visual {
+  width: 50%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.Hero-title {
+  text-align: center;
+  width: 50%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.Hero-title h1 {
+  font-size: 160px;
+  margin-bottom: 20px;
+}
+.Hero-title p {
+  letter-spacing: 0.5em;
+  font-size: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Hero {
+    padding: 50px 0;
+  }
+  .Hero-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  .Hero-visual, .Hero-title {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    float: none;
+    display: block;
+  }
+  .Hero-visual h1, .Hero-title h1 {
+    font-size: 80px;
+    margin-bottom: 20px;
+  }
+  .Hero-visual p, .Hero-title p {
+    letter-spacing: 0.5em;
+    font-size: 16px;
+  }
+}
+.Section {
+  padding: 100px 0;
+  overflow: hidden;
+}
+.Section-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+.Section-title {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #888;
+}
+.Section-text {
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
+  color: #888;
+}
+.Section-gray {
   background: #eee;
+}
+.Section-white {
+  background: #FFF;
+}
+
+@media only screen and (max-width: 768px) {
+  .Section {
+    padding: 50px 15px;
+  }
+  .Section-wrapper {
+    width: 100%;
+  }
+  .Section-title {
+    font-size: 20px;
+  }
+  .Section-text {
+    font-size: 14px;
+  }
+}
+body {
+  font-family: 'Noto Sans Japanese', sans-serif;
+  background: #333;
+  text-decoration: none;
+}
+body a {
+  text-decoration: none;
 }

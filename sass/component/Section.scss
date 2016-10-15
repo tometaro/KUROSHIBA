@@ -1,0 +1,50 @@
+.Section {
+    padding: 100px 0;
+    overflow: hidden;
+
+    &-wrapper {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    &-title {
+        font-size: 20px;
+        margin-bottom: 40px;
+        color: #888;
+
+    }
+
+    &-text {
+        font-size: 15px;
+        line-height: 1.7;
+        letter-spacing: 0.1em;
+        color: #888;
+    }
+
+    &-gray {
+        background: #eee;
+    }
+
+    &-white {
+        background: #FFF;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .Section {
+        padding: 50px 15px;
+
+        &-wrapper {
+            width: 100%;
+        }
+
+        &-title {
+            font-size: 20px;
+        }
+
+        &-text {
+            font-size: 14px;
+        }
+    }
+}

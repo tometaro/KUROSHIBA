@@ -1,0 +1,59 @@
+.Hero {
+  background: #ccc;
+  width: 100%;
+  color: #FFF;
+  padding-top: 71px;
+}
+.Hero-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  height: 610px;
+  display: table;
+}
+.Hero-visual {
+  width: 50%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.Hero-title {
+  text-align: center;
+  width: 50%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.Hero-title h1 {
+  font-size: 160px;
+  margin-bottom: 20px;
+}
+.Hero-title p {
+  letter-spacing: 0.5em;
+  font-size: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Hero {
+    padding: 50px 0;
+  }
+  .Hero-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  .Hero-visual, .Hero-title {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    float: none;
+    display: block;
+  }
+  .Hero-visual h1, .Hero-title h1 {
+    font-size: 80px;
+    margin-bottom: 20px;
+  }
+  .Hero-visual p, .Hero-title p {
+    letter-spacing: 0.5em;
+    font-size: 16px;
+  }
+}

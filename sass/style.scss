@@ -1,6 +1,19 @@
 @import "compass/reset";
-@import "component/header.scss";
+// @import "suitcss.css";
+@import "component/SiteHeader.scss";
+@import "component/SiteNavi.scss";
+@import "component/Hero.scss";
+@import "component/Section.scss";
+@import "component/SiteFooter.scss";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
  
+
 body {
-	background: #eee;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    background: #333;
+    text-decoration: none;
+
+    a {
+        text-decoration: none;
+    }
 }
