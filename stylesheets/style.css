@@ -1,339 +1,67 @@
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
+/*
+Error: File to import not found or unreadable: _variable.
+       Load paths:
+         /Users/TOMETARO/WEB/git/KUROSHIBA/sass
+         /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets
+         Compass::SpriteImporter
+        on line 3 of /Users/TOMETARO/WEB/git/KUROSHIBA/sass/style.scss
 
-html {
-  line-height: 1;
-}
+1: @import "compass/reset";
+2: // @import "suitcss.css";
+3: @import "_variable";
+4: @import "component/SiteHeader.scss";
+5: @import "component/SiteNavi.scss";
+6: @import "component/Hero.scss";
+7: @import "component/Section.scss";
+8: @import "component/SiteFooter.scss";
 
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-.SiteHeader {
-  position: fixed;
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px 0;
-  z-index: 9999;
-  width: 100%;
-  transition: 1s ease-in-out;
-}
-.SiteHeader-inner {
-  margin: 0 auto;
-  width: 1000px;
-  position: relative;
-}
-.SiteHeader-logo {
-  padding-left: 10px;
-}
-.SiteHeader-logokuroshiba {
-  display: inline-block;
-}
-.SiteHeader-bg {
-  background: rgba(170, 170, 170, 0.9);
-  transition: 1s ease-in-out;
-}
-.SiteHeader h1 {
-  font-size: 18px;
-  padding-left: 8px;
-  overflow: hidden;
-  line-height: 30px;
-  letter-spacing: 0.2em;
-  display: inline-block;
-}
-
-.SiteHeader a {
-  color: #fff;
-}
-
-@media only screen and (max-width: 768px) {
-  .SiteHeader, .SiteHeader-inner {
-    width: 100%;
-  }
-
-  .SiteHeader {
-    margin-top: 0;
-  }
-  .SiteHeader-inner {
-    width: 100%;
-  }
-  .SiteHeader-logo {
-    padding-left: 16px;
-  }
-}
-.SiteNavi ul {
-  list-style: none;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  font-size: 15px;
-  letter-spacing: .3em;
-  line-height: 30px;
-}
-.SiteNavi ul li {
-  float: left;
-  position: relative;
-}
-.SiteNavi ul li a {
-  padding: 0 30px;
-}
-.SiteNavi ul li:hover {
-  text-shadow: 0 0 3px #FFF, 0 0 5px #FFF;
-}
-.SiteNavi-toggle {
-  display: none;
-  position: absolute;
-  top: 6px;
-  right: 16px;
-  width: 18px;
-  height: 14px;
-  cursor: pointer;
-  z-index: 101;
-}
-.SiteNavi-toggle span {
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background: #FFF;
-  left: 0;
-  -webkit-transition: .35s ease-in-out;
-  -moz-transition: .35s ease-in-out;
-  transition: .35s ease-in-out;
-}
-.SiteNavi-toggle span:nth-child(1) {
-  top: 0;
-}
-.SiteNavi-toggle span:nth-child(2) {
-  top: 6px;
-}
-.SiteNavi-toggle span:nth-child(3) {
-  bottom: 0;
-}
-
-@media only screen and (max-width: 768px) {
-  .SiteNavi {
-    position: fixed;
-    transform: translateX(-800px);
-    transition-duration: 5.0s;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-  }
-  .SiteNavi ul {
-    list-style: none;
-    position: static;
-    right: 0;
-    bottom: 0;
-    transition-duration: 2.0s;
-    opacity: 0;
-  }
-  .SiteNavi ul li {
-    float: none;
-    position: static;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 16px 16px;
-  }
-  .SiteNavi ul li a {
-    padding: 0;
-  }
-  .SiteNavi ul li:after {
-    display: none;
-  }
-  .SiteNavi-toggle {
-    display: block;
-  }
-  .SiteNavi-open .SiteNavi {
-    -webkit-overflow-scrolling: touch;
-    transform: translateX(0);
-    opacity: 1;
-    transition-duration: 0.5s;
-    z-index: 10;
-  }
-  .SiteNavi-open span:nth-child(1) {
-    top: 6px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  .SiteNavi-open span:nth-child(2) {
-    opacity: 0;
-  }
-  .SiteNavi-open span:nth-child(3) {
-    bottom: 6px;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-  .SiteNavi-open ul {
-    opacity: 1;
-    transition-duration: 4.0s;
-  }
-  .SiteNavi-inner {
-    float: left;
-    width: 70%;
-    background: rgba(0, 0, 0, 0.7);
-    height: 100%;
-  }
-  .SiteNavi-shadow {
-    float: right;
-    width: 30%;
-    background: transparent;
-    height: 100%;
-  }
-}
-.Hero {
-  background: #ccc;
-  width: 100%;
-  color: #FFF;
-  padding-top: 71px;
-}
-.Hero-wrapper {
-  width: 1000px;
-  margin: 0 auto;
-  height: 610px;
-  display: table;
-}
-.Hero-visual {
-  width: 50%;
-  height: 100%;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-}
-.Hero-title {
-  text-align: center;
-  width: 50%;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-}
-.Hero-title h1 {
-  font-size: 160px;
-  margin-bottom: 20px;
-}
-.Hero-title p {
-  letter-spacing: 0.5em;
-  font-size: 32px;
-}
-
-@media only screen and (max-width: 768px) {
-  .Hero {
-    padding: 50px 0;
-  }
-  .Hero-wrapper {
-    width: 100%;
-    height: auto;
-  }
-  .Hero-visual, .Hero-title {
-    width: 100%;
-    height: auto;
-    text-align: center;
-    float: none;
-    display: block;
-  }
-  .Hero-visual h1, .Hero-title h1 {
-    font-size: 80px;
-    margin-bottom: 20px;
-  }
-  .Hero-visual p, .Hero-title p {
-    letter-spacing: 0.5em;
-    font-size: 16px;
-  }
-}
-.Section {
-  padding: 100px 0;
-  overflow: hidden;
-}
-.Section-wrapper {
-  width: 1000px;
-  margin: 0 auto;
-}
-.Section-title {
-  font-size: 20px;
-  margin-bottom: 40px;
-  color: #888;
-}
-.Section-text {
-  font-size: 15px;
-  line-height: 1.7;
-  letter-spacing: 0.1em;
-  color: #888;
-}
-.Section-gray {
-  background: #eee;
-}
-.Section-white {
-  background: #FFF;
-}
-
-@media only screen and (max-width: 768px) {
-  .Section {
-    padding: 50px 15px;
-  }
-  .Section-wrapper {
-    width: 100%;
-  }
-  .Section-title {
-    font-size: 20px;
-  }
-  .Section-text {
-    font-size: 14px;
-  }
-}
-body {
-  font-family: 'Noto Sans Japanese', sans-serif;
-  background: #333;
-  text-decoration: none;
-}
-body a {
-  text-decoration: none;
-}
+Backtrace:
+/Users/TOMETARO/WEB/git/KUROSHIBA/sass/style.scss:3
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:281:in `render'
+/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/bin/compass:44:in `call'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/usr/local/bin/compass:22:in `load'
+/usr/local/bin/compass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: _variable.\A        Load paths:\A          /Users/TOMETARO/WEB/git/KUROSHIBA/sass\A          /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets\A          Compass::SpriteImporter\A         on line 3 of /Users/TOMETARO/WEB/git/KUROSHIBA/sass/style.scss\A \A 1: @import \"compass/reset\";\A 2: // @import \"suitcss.css\";\A 3: @import \"_variable\";\A 4: @import \"component/SiteHeader.scss\";\A 5: @import \"component/SiteNavi.scss\";\A 6: @import \"component/Hero.scss\";\A 7: @import \"component/Section.scss\";\A 8: @import \"component/SiteFooter.scss\";"; }
