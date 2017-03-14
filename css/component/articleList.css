@@ -1,21 +1,21 @@
 /*
-Error: Undefined variable: "$color-darkgray".
-        on line 34 of /Users/TOMETARO/WEB/git/KUROSHIBA/sass/component/SiteHeader.scss
+Error: Undefined variable: "$White".
+        on line 35 of /Users/TOMETARO/WEB/git/KUROSHIBA/sass/component/articleList.scss
 
-29:         letter-spacing: 0.2em;
-30:         display: inline-block;
-31:     }
-32: 
-33:     a  {
-34:         color: $color-darkgray;
-35:         transition: 1s ease-in-out;
-36:     }
-37: 
-38:     &-bg {
-39:         background: rgba(51,51,51,0.9);
+30:     height: auto;
+31:     min-height: 200px;
+32:     background: 0 0;
+33:     border-radius: 5px;
+34:     z-index: 0;
+35:     background :$White;
+36:     border: 1px solid #ddd;
+37:     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
+38: 
+39:   }
+40: 
 
 Backtrace:
-/Users/TOMETARO/WEB/git/KUROSHIBA/sass/component/SiteHeader.scss:34
+/Users/TOMETARO/WEB/git/KUROSHIBA/sass/component/articleList.scss:35
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -83,4 +83,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-darkgray\".\A         on line 34 of /Users/TOMETARO/WEB/git/KUROSHIBA/sass/component/SiteHeader.scss\A \A 29:         letter-spacing: 0.2em;\A 30:         display: inline-block;\A 31:     }\A 32: \A 33:     a  {\A 34:         color: $color-darkgray;\A 35:         transition: 1s ease-in-out;\A 36:     }\A 37: \A 38:     &-bg {\A 39:         background: rgba(51,51,51,0.9);"; }
+  content: "Error: Undefined variable: \"$White\".\A         on line 35 of /Users/TOMETARO/WEB/git/KUROSHIBA/sass/component/articleList.scss\A \A 30:     height: auto;\A 31:     min-height: 200px;\A 32:     background: 0 0;\A 33:     border-radius: 5px;\A 34:     z-index: 0;\A 35:     background :$White;\A 36:     border: 1px solid #ddd;\A 37:     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);\A 38: \A 39:   }\A 40: "; }

@@ -1,11 +1,10 @@
-
 .SiteNavi {
     ul {
         list-style: none;
         position: absolute;
         right: 0;
         bottom: 0;
-        font-size: 15px;
+        font-size: 13px;
         letter-spacing: .3em;
         line-height: 30px;
 
@@ -22,7 +21,7 @@
         }
     }
 
-    &-toggle {
+    &__toggle {
         display: none;
         position: absolute;
         top: 6px;
@@ -32,15 +31,11 @@
         cursor: pointer;
         z-index: 101;
 
-        div {
-        }
-
         span {
             display: block;
             position: absolute;
             height: 2px;
             width: 100%;
-            background: #FFF;
             left: 0;
             -webkit-transition: .35s ease-in-out;
             -moz-transition: .35s ease-in-out;
@@ -97,11 +92,11 @@
             }
         }
 
-        &-toggle {
+        &__toggle {
             display: block;
         }
 
-        &-open {
+        &__open {
             .SiteNavi {
                 -webkit-overflow-scrolling: touch;
                 transform: translateX(0);
@@ -134,7 +129,7 @@
                 transition-duration: 4.0s;
             }
         }
-        &-inner {
+        &__inner {
             float: left;
             width: 70%;
             background: rgba(0,0,0,0.7);
@@ -142,7 +137,7 @@
 
         }
 
-        &-shadow {
+        &__shadow {
             float: right;
             width: 30%;
             background: rgba(0,0,0,0);

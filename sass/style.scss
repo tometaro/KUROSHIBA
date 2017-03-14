@@ -1,16 +1,17 @@
+@import "variable";
 @import "compass/reset";
-// @import "suitcss.css";
-@import "_variable";
-@import "component/SiteHeader.scss";
-@import "component/SiteNavi.scss";
-@import "component/Hero.scss";
-@import "component/Section.scss";
-@import "component/SiteFooter.scss";
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import "component/SiteHeader";
+@import "component/SiteLogo";
+@import "component/SiteNavi";
+@import "component/Hero";
+@import "component/Section";
+@import "component/SiteFooter";
+@import "component/ArticleList";
+@import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css);
 
 body {
-    font-family: 'Noto Sans Japanese', sans-serif;
-    background: $color-darkgray;
+    font-family: "Rounded Mplus 1c", sans-serif;
+    background: #333;
     text-decoration: none;
 
     a {

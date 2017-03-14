@@ -2,31 +2,31 @@
     padding: 100px 0;
     overflow: hidden;
 
-    &-wrapper {
+    &__wrapper {
         width: 1000px;
         margin: 0 auto;
     }
 
-    &-title {
+    &__title {
         font-size: 20px;
         margin-bottom: 40px;
         color: #888;
 
     }
 
-    &-text {
+    &__text {
         font-size: 15px;
         line-height: 1.7;
         letter-spacing: 0.1em;
         color: #888;
     }
 
-    &-gray {
-        background: #eee;
+    &__gray {
+        background: #EEE;
     }
 
-    &-white {
-        background: #FFF;
+    &__white {
+        background: $color-white;
     }
 
 }
@@ -35,15 +35,15 @@
     .Section {
         padding: 50px 15px;
 
-        &-wrapper {
+        &__wrapper {
             width: 100%;
         }
 
-        &-title {
+        &__title {
             font-size: 20px;
         }
 
-        &-text {
+        &__text {
             font-size: 14px;
         }
     }

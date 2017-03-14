@@ -18,7 +18,7 @@ gulp.task('compass', function(){
     gulp.src('sass/**/*.scss')
     .pipe(compass({
         config_file: 'config.rb',
-        css: 'stylesheets/',
+        css: 'css/',
         sass: 'sass/'
     }));
 });
@@ -26,7 +26,7 @@ gulp.task('compass', function(){
  
 // css-min
 gulp.task('cssmin', function () {
-  gulp.src('stylesheets/*.css')
+  gulp.src('css/*.css')
   .pipe(cssmin())
   .pipe(rename({suffix: '.min'}))
   .pipe(gulp.dest('cssmin'))
@@ -44,7 +44,7 @@ gulp.task('watch', ['server'], function(){
     gulp.watch('sass/**/*.scss', function(event) {
         gulp.run('compass');
     });
-    gulp.watch('stylesheets/**/*.css', function(event) {
+    gulp.watch('css/**/*.css', function(event) {
         gulp.run('cssmin');
     });
 });
